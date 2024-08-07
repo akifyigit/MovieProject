@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Movie List</title>
+    <link
+      href="https://i.pinimg.com/564x/03/48/30/034830481aece1ccea77cb8dc70ab1b7.jpg"
+      rel="icon"
+    />
+    <link href="style.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <!-- <nav>
+      <dl>
+        <dt class="list_of">List of the Movies</dt>
+        <dd>
+          <ul class="firstlist">
+            <li><a href="#Movie1">The Fast and the Furious</a></li>
+            <li><a href="#Movie2">Fight Club</a></li>
+            <li><a href="#Movie3">V for Vendetta</a></li>
+          </ul>
+        </dd>
+      </dl>
+    </nav> -->
+
+    <div id="modal" class="offmodal">
+      <div class="modal-container">
+        <header>
+          <h2>Addition</h2>
+          <span class="close">
+            <a href="#">X</a>
+          </span>
+        </header>
+        <div class="modal-body">
+          <form id="form">
+            <tr id="printForm">
+              <td>
+                <label for="poster">Poster:</label>
+                <input
+                  type="url"
+                  name="poster"
+                  id="poster"
+                  placeholder="Image URL"
+                  required
+                />
+              </td>
+              <td>
+                <label class="bigger" for="name">Name:</label>
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  placeholder="Movie Name"
+                  required
+                />
+              </td>
+              <td>
+                <label class="bigger" for="year">Year:</label>
+                <select id="year" name="year"></select>
+              </td>
+              <td>
+                <label class="bigger" for="genre">Genre:</label>
+                <input
+                  type="text"
+                  name="genre"
+                  id="genre"
+                  placeholder="genre"
+                  required
+                />
+              </td>
+              <td>
+                <label class="bigger" for="description">Description:</label>
+                <textarea
+                  name="description"
+                  id="description"
+                  placeholder="Description"
+                ></textarea>
+                <input type="submit" value="Add" />
+              </td>
+            </tr>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal2" class="offmodal">
+      <div class="modal-container">
+        <header>
+          <h2>Modal</h2>
+          <span class="close2">
+            <a href="#">X</a>
+          </span>
+        </header>
+        <div class="modal-body">
+          <form id="updateForm">
+            <tr id="printForm">
+              <td>
+                <label for="poster">Poster:</label>
+                <input
+                  type="url"
+                  name="updatePoster"
+                  id="updatePoster"
+                  placeholder="Image URL"
+                  required
+                />
+              </td>
+              <td>
+                <label class="bigger" for="name">Name:</label>
+                <input
+                  type="text"
+                  name="updateName"
+                  id="updateName"
+                  placeholder="Movie Name"
+                  required
+                />
+              </td>
+              <td>
+                <label class="bigger" for="year">Year:</label>
+                <select id="updateYear" name="updateYear"></select>
+              </td>
+              <td>
+                <label class="bigger" for="genre">Genre:</label>
+                <input
+                  type="text"
+                  name="updateGenre"
+                  id="updateGenre"
+                  placeholder="genre"
+                  required
+                />
+              </td>
+              <td>
+                <label class="bigger" for="description">Description:</label>
+                <textarea
+                  name="updateDescription"
+                  id="updateDescription"
+                  placeholder="Description"
+                ></textarea>
+                <input type="submit" value="Update" />
+              </td>
+            </tr>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <caption>
+      <h1>
+        <strong><em>My Favorite Movies And Games List</em></strong>
+      </h1>
+    </caption>
+    <div class="yearFilter">
+      <select id="year-filter">
+        <option value="0">Show All</option>
+      </select>
+    </div>
+    <div class="topItems">
+      <button id="button" class="resetButton">Reset Database</button>
+      <a href="#" id="linkModal" class="AddForm">Add Form</a>
+    </div>
+    <table id="title">
+      <tr>
+        <th>Functions</th>
+        <th>Poster</th>
+        <th>Name</th>
+        <th>Year</th>
+        <th>Genre</th>
+        <th>Description</th>
+      </tr>
+    </table>
+
+    <div class="about2">
+      <h2 class="about">About Us</h2>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

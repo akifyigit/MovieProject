@@ -1,0 +1,256 @@
+body {
+  background: url("https://i.pinimg.com/564x/be/79/89/be798981bbf1559b5c00f3c1cac00b3d.jpg")
+    repeat;
+}
+
+h1 {
+  color: rgb(195, 23, 23);
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 40px;
+  background-color: rgba(255, 255, 255, 0.671); 
+}
+p {
+  font: 14px Arial, sans-serif;
+}
+#title {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "Times New Roman";
+  font-variant: small-caps;
+  color: rgb(195, 23, 23);
+
+}
+.firstlist {
+  list-style: square inside;
+  padding-left: 40px;
+}
+.firstlist li {
+  font-size: 110%;
+  list-style-position: inside;
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  padding-left: 40px;
+}
+dl,
+dt {
+  margin-left: 10px;
+}
+h2 {
+  color: rgb(195, 23, 23);
+  font-size: 28px;
+  margin-bottom: 1px;
+}
+table.private-table {
+  border: 2px solid rgb(38, 34, 52);
+  border-spacing: 9px;
+  border-width: 2px 2px 3px 3px;
+  border-color: rgb(195, 23, 23);
+}
+table,
+th,
+td {
+  margin-top: 2px;
+  margin-left: 10px;
+  margin-right: 15px;
+  margin-bottom: 2px;
+  border: 2px solid gray;
+  border-style: ridge;
+  border-spacing: 5px;
+  border-width: 2px 2px 3px 3px;
+  border-color: rgb(195, 23, 23);
+  caption-side: top;
+  text-indent: 10px;
+}
+table {
+  page-break-after: always;
+  background-color: rgb(255, 255, 255);
+  width: 80vw;
+  margin: 0 auto;
+}
+.about2{
+  background-color: rgba(255, 255, 255, 0.671); 
+
+}
+.vertical {
+  vertical-align: middle;
+}
+.aboutUs {
+  text-align: right;
+  margin-right: 160px;
+  
+}
+.aboutUsContent {
+  float: right;
+  text-align: left; 
+}
+
+section {
+  page-break-before: always;
+}
+.about {
+  margin: 10px;
+  orphans: 2;
+  background-color: rgba(255, 255, 255, 0.671); 
+
+}
+.list_of {
+  widows: 2;
+}
+a:link {
+  color: rgb(195, 23, 23);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+a:active {
+  color: red;
+}
+
+input:focus, button:focus, a:focus {
+  outline: 2px solid rgb(255, 0, 0);
+}
+a:visited {
+  color: rgb(195, 23, 23);
+}
+
+@media screen and (max-width: 320px) and (max-width: 480px) {
+  .bigger {
+    font-style: italic;
+    font-size: 24px;
+  }
+}
+
+@media print {
+  #printForm {
+    display: none;
+  }
+}
+
+.yearFilter {
+  display: flex;
+  justify-content: center;
+}
+.topItems {
+  display: flex;
+  justify-content: center;
+  padding: 24px;
+}
+.resetButton {
+  margin: 25px;
+  color: rgb(195, 23, 23);
+  font-size: 15px;
+  border-radius: 20%;
+}
+.AddForm {
+  margin: 25px;
+  width: 60px;
+  border: 1px solid black;
+  border-radius: 20%;
+  background-color: rgb(255, 255, 255);
+  text-align: center;
+}
+/* Modal Part */
+body {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  margin: 10px;
+}
+
+.container {
+  border: 1px solid rgb(195, 23, 23);
+  width: 95%;
+  padding: 10px;
+  margin: auto;
+}
+
+.offmodal {
+  display: none;
+  transition: display 1s ease-in-out;
+}
+
+.onmodal {
+  display: block;
+  transition: display 1s ease-in-out;
+}
+
+#modal::before {
+  content: "";
+  display: block;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(195, 23, 23);
+  user-select: none;
+}
+
+.modal-container {
+  border: 1px solid rgb(195, 23, 23);
+  height: auto;
+  margin: auto;
+  background-color: white;
+  position: fixed;
+  /* top: 20%;
+  left: 8%; */
+  z-index: 2;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 1);
+  font-size: 0.8rem;
+}
+
+.modal-container header {
+  border: 1px solid lightgray;
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal-container h2 {
+  margin: 15px;
+}
+
+.modal-body {
+  padding: 5px;
+}
+
+.close {
+  text-align: center;
+  width: 50px;
+  background-color: lightgray;
+}
+
+.close > a {
+  display: block;
+  text-decoration: none;
+  font-size: xx-large;
+  padding: 8px;
+}
+
+.close > a:hover {
+  color: red;
+}
+.close2 {
+  text-align: center;
+  width: 50px;
+  background-color: lightgray;
+}
+
+.close2 > a {
+  display: block;
+  text-decoration: none;
+  font-size: xx-large;
+  padding: 8px;
+}
+
+.close2 > a:hover {
+  color: red;
+}

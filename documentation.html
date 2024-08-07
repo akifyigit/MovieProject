@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API Documentation</title>
+  </head>
+  <body>
+    <h1>API Documentation</h1>
+
+    <h2>Base URL</h2>
+    <p>The base URL for all endpoints is:</p>
+    <code>http://localhost:3000/api/media</code>
+
+    <h2>Endpoints</h2>
+
+    <h3>Retrieve All Media Items</h3>
+    <ul>
+      <li><strong>Endpoint:</strong> <code>/media</code></li>
+      <li><strong>HTTP Method:</strong> <code>GET</code></li>
+      <li>
+        <strong>Description:</strong> Retrieves all media items stored in the
+        database.
+      </li>
+      <li><strong>Request Body:</strong> None</li>
+      <li>
+        <strong>Response:</strong>
+        <ul>
+          <li><strong>Status Code:</strong> 200 (OK)</li>
+          <li><strong>Content-Type:</strong> application/json</li>
+          <li>
+            <strong>Body:</strong> An array of media items in JSON format.
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <h4>Example</h4>
+    <pre>
+    <code>
+      GET /api/media
+      
+      Response:
+      [
+        {
+          "id": 1,
+          "name": "Movie 1",
+          "year": "2023",
+          "genre": "Action",
+          "poster": "http://example.com/poster.jpg",
+          "description": "Description of Movie 1"
+        },
+        ...
+      ]
+    </code>
+  </pre>
+
+    <!-- Add more endpoint documentation here -->
+
+    <!-- Example route for adding a new media item -->
+    <h3>Add a New Media Item</h3>
+    <ul>
+      <li><strong>Endpoint:</strong> <code>/media</code></li>
+      <li><strong>HTTP Method:</strong> <code>POST</code></li>
+      <li>
+        <strong>Description:</strong> Adds a new media item to the database.
+      </li>
+      <li>
+        <strong>Request Body:</strong> JSON object with the following
+        properties:
+        <ul>
+          <li><code>name</code> (string): Name of the media item</li>
+          <li><code>year</code> (string): Year of release</li>
+          <li><code>genre</code> (string): Genre of the media item</li>
+          <li><code>poster</code> (string): URL of the poster image</li>
+          <li>
+            <code>description</code> (string): Description of the media item
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Response:</strong>
+        <ul>
+          <li><strong>Status Code:</strong> 201 (Created)</li>
+          <li><strong>Content-Type:</strong> application/json</li>
+          <li><strong>Body:</strong> JSON object with a success message</li>
+        </ul>
+      </li>
+    </ul>
+    <h4>Example</h4>
+    <pre>
+  <code>
+    POST /api/media
+    
+    Request Body:
+    {
+      "name": "New Movie",
+      "year": "2024",
+      "genre": "Drama",
+      "poster": "http://example.com/new_movie.jpg",
+      "description": "Description of the new movie"
+    }
+    
+    Response:
+    {
+      "message": "Media item added successfully"
+    }
+  </code>
+</pre>
+
+    <!-- Example route for updating a media item -->
+    <h3>Update Media Item</h3>
+    <ul>
+      <li><strong>Endpoint:</strong> <code>/media/:id</code></li>
+      <li><strong>HTTP Method:</strong> <code>PUT</code></li>
+      <li>
+        <strong>Description:</strong> Updates a specific media item in the
+        database.
+      </li>
+      <li>
+        <strong>Request Body:</strong> JSON object with the properties to be
+        updated:
+        <ul>
+          <li><code>name</code> (string): Updated name of the media item</li>
+          <li><code>year</code> (string): Updated year of release</li>
+          <li><code>genre</code> (string): Updated genre of the media item</li>
+          <li><code>poster</code> (string): Updated URL of the poster image</li>
+          <li>
+            <code>description</code> (string): Updated description of the media
+            item
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Response:</strong>
+        <ul>
+          <li><strong>Status Code:</strong> 200 (OK)</li>
+          <li><strong>Content-Type:</strong> application/json</li>
+          <li><strong>Body:</strong> JSON object with a success message</li>
+        </ul>
+      </li>
+    </ul>
+    <h4>Example</h4>
+    <pre>
+      <code>
+        PUT /api/media/:id
+        
+        Request Body:
+        {
+          "name": "Updated Movie",
+          "year": "2025",
+          "genre": "Comedy",
+          "poster": "http://example.com/updated_movie.jpg",
+          "description": "Updated description of the movie"
+        }
+        
+        Response:
+        {
+          "message": "Media item deleted successfully"
+        }
+      </code>
+    </pre>
+
+    <!-- Example route for retrieving a specific media item  -->
+    <h3>Get Spesific Media Item</h3>
+    <ul>
+      <li><strong>Endpoint:</strong> <code>/media/:id</code></li>
+      <li><strong>HTTP Method:</strong> <code>GET</code></li>
+      <li>
+        <strong>Description:</strong> Retrieves a specific media item from the
+        database based on its ID.
+      </li>
+      <li>
+        <strong>Request Parameters:</strong>
+        <ul>
+          <li><code>id</code> (integer): ID of the media item to retrieve</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Response:</strong>
+        <ul>
+          <li><strong>Status Code:</strong> 200 (OK)</li>
+          <li><strong>Content-Type:</strong> application/json</li>
+          <li>
+            <strong>Body:</strong> JSON object containing the media item with
+            the specified ID
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <h4>Example</h4>
+    <pre>
+  <code>
+    GET /api/media/123
+    
+    Response:
+    {
+      "id": 123,
+      "name": "Example Movie",
+      "year": "2023",
+      "genre": "Action",
+      "poster": "http://example.com/example_movie.jpg",
+      "description": "Description of the example movie"
+    }
+  </code>
+</pre>
+
+    <!-- Example route for deleting a media item -->
+    <h3>Delete Media Item</h3>
+    <ul>
+      <li><strong>Endpoint:</strong> <code>/media/:id</code></li>
+      <li><strong>HTTP Method:</strong> <code>DELETE</code></li>
+      <li>
+        <strong>Description:</strong> Deletes a specific media item from the
+        database based on its ID.
+      </li>
+      <li>
+        <strong>Request Parameters:</strong>
+        <ul>
+          <li><code>id</code> (integer): ID of the media item to delete</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Response:</strong>
+        <ul>
+          <li><strong>Status Code:</strong> 200 (OK)</li>
+          <li><strong>Content-Type:</strong> application/json</li>
+          <li><strong>Body:</strong> JSON object with a success message</li>
+        </ul>
+      </li>
+    </ul>
+    <h4>Example</h4>
+    <pre>
+  <code>
+    DELETE /api/media/123
+    
+    Response:
+    {
+      "message": "Media item deleted successfully"
+    }
+  </code>
+</pre>
+  </body>
+</html>
